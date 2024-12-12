@@ -1,0 +1,35 @@
+BDD-Style Test Cases
+ (It Includes positive and negative test cases)
+Feature: Sending an email in Gmail
+
+Scenario: Successfully sending an email with all valid inputs
+
+Given: A logged-in Gmail user
+
+When: The user clicks on Compose button, fills the To field, Subject field, and check email body with valid values, and click on Send button.
+Then: The email is sent successfully, and a confirmation notification is displayed.
+
+
+Scenario: Error when "To" field is empty
+
+Given: A logged-in Gmail user
+
+When: The user click on "Compose" button, leaves the "To" field blank, fills the "Subject" and body, and cclick on Send button.
+Then: A validation message is displayed for the "To" field.
+
+
+Scenario: Successfully sending an email with an empty subject
+
+Given: A logged-in Gmail user
+
+When: The user click on "Compose" button, fills the "To" field, leaves the "Subject" field empty, fills the body, and click on Send button.
+Then: The email is sent successfully.
+
+
+Scenario: Successfully sending an email with special characters in the subject and body
+
+Given: A logged-in Gmail user
+
+When: The user click on "Compose" button, fills the "To" field, "Subject" field, and body with special characters like @#$, and clicks "Send"
+
+Then: The email is sent successfully.
